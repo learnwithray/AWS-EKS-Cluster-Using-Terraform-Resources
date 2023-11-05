@@ -113,26 +113,3 @@ output "node_group_private_version" {
 #   value       = local.eks_cluster_openid_connect_provider_arn_extract_from_arn
 # }
 
-
-
-
-
-
-
-# ############ testing will be removed
-# output "eks_cluster_openid_connect_provider_arn" {
-#   description = "The URL on the EKS cluster OIDC Issuer"
-#   value       = aws_eks_cluster.eks_terraform_cluster.identity[0].oidc[0].issuer
-# }
-
-# locals {
-#   cluster_oidc_issuer_url = aws_eks_cluster.eks_terraform_cluster.identity[0].oidc[0].issuer
-#   //cluster_oidc_issuer_url_no_https = replace(local.cluster_oidc_issuer_url, "^https://", "")
-#   eks_cluster_openid_connect_provider_arn_extract_from_arn = element(split("https://", "${aws_eks_cluster.eks_terraform_cluster.identity[0].oidc[0].issuer}"), 1)
-# }
-
-# output "eks_cluster_openid_connect_provider_arn_extract_from_arn" {
-#   description = "The URL on the EKS cluster OIDC Issuer without 'https://'"
-#   value       = local.eks_cluster_openid_connect_provider_arn_extract_from_arn
-# }
-
